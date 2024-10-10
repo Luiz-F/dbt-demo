@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+    - name: vendas
+      description: "Testando dados"
+      columns:
+          - name: customer_name
+            description: "The primary key for this table"
+            tests:
+                - unique
+
+
+    - name: stage_vendas
+      description: "A starter dbt model"
+      columns:
+          - name: preco_caro
+            description: "True de preco for maior que 30"
+            tests:
+                - not_null
+
